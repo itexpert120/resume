@@ -1,6 +1,11 @@
-% !TEX root = ./resume.tex
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
 
-\documentclass[a4paper,11pt]{article}
+\documentclass[letterpaper,11pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -13,13 +18,24 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
-\usepackage{hyphenat}
-\usepackage{fontawesome}
 \input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
-% \fancyfoot[C]{\thepage} % Add page numbers at the center of the footer
+\fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
@@ -32,22 +48,24 @@
 
 \urlstyle{same}
 
-\setlength{\footskip}{13.59999pt}
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
+
+% Fix template
+\setlength{\footskip}{4.08003pt}
+\usepackage[T1]{fontenc}
 
 % Sections formatting
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% Ensure that generated PDF is machine-readable/ATS parsable
+% Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
 
 %-------------------------
 % Custom commands
-
 \newcommand{\resumeItem}[1]{
   \item\small{
     {#1 \vspace{-2pt}}
@@ -63,32 +81,16 @@
 }
 
 \newcommand{\resumeSubSubheading}[2]{
-    \vspace{-2pt}\item
+    \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textit{\small#1} & \textit{\small #2} \\
     \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeEducationHeading}[4]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small#4} \\
-    \end{tabular*}\vspace{-5pt}
-}
-
 \newcommand{\resumeProjectHeading}[2]{
-    \vspace{-2pt}\item
+    \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & #2 \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeOrganizationHeading}[4]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & \textit{\small #2} \\
-      \textit{\small#3}
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -102,127 +104,111 @@
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \begin{document}
 
-%---------- HEADING ----------
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
 
 \begin{center}
-  \textbf{\Huge Muhammad Zeeshan Ahmad} \\ \vspace{3pt}
-  \small
-  \faMobile \hspace{.5pt} \href{tel:923004761002}{+92 300 476 1002}
-  $|$
-  \faAt \hspace{.5pt} \href{mailto:itexpert120@outlook.com}{itexpert120@outlook.com}
-  $|$
-  \faLinkedinSquare \hspace{.5pt} \href{https://www.linkedin.com/in/itexpert120}{LinkedIn}
-  $|$
-  \faGithub \hspace{.5pt} \href{https://github.com/itexpert120}{GitHub}
-  $|$
-  \faMapMarker \hspace{.5pt} {Multan, Pakistan}
+    \textbf{\Huge \scshape Muhammad Zeeshan Ahmad} \\ \vspace{1pt}
+    \small \href{tel:+923004761002}{+92 300 4761002} $|$ \href{mailto:itexpert120@outlook.com}{{itexpert120@outlook.com}} $|$ 
+    \href{https://linkedin.com/in/itexpert120}{{linkedin.com/in/itexpert120}} $|$
+    \href{https://github.com/itexpert120}{{github.com/itexpert120}}
 \end{center}
 
 
-%----------- EDUCATION -----------
-
+%-----------EDUCATION-----------
 \section{Education}
-\vspace{3pt}
-\resumeSubHeadingListStart
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {The Islamia University of Bahawalpur}{Bahawalpur, Pakistan}
+      {Bachelor of Science in Computer Systems Engineering}{(3.72/4.00 CGPA) Graduated 2025}
+  \resumeSubHeadingListEnd
 
-\resumeEducationHeading
-{The Islamia University of Bahawalpur}{Bahawalpur, Pakistan}
-{Bachelor of Science in Computer Systems Engineering; \textbf{CGPA: 3.71/4.00}}{Sep 2021 \textbf{--} Present}
 
-\resumeSubHeadingListEnd
-
-%----------- SKILLS -----------
-
-\section{Skills}
-\vspace{2pt}
-\resumeSubHeadingListStart
-\small{\item{
-    \textbf{Core:} TypeScript, JavaScript (ES6+), HTML5, CSS3 \\ \vspace{3pt}
-    \textbf{Frontend:} React.js, Next.js, TanStack Query, Zustand, Tailwind CSS, Chakra UI, Framer Motion, shadcn/ui \\ \vspace{3pt}
-    \textbf{Testing \& Tools:} Jest, React Testing Library, Playwright, Git, GitHub Actions, Vite, npm/yarn/pnpm/bun \\ \vspace{3pt}
-    \textbf{API Integration:} RESTful APIs, GraphQL, OpenAPI/Swagger \\ \vspace{3pt}
-    \textbf{Cloud \& Deployment:} Vercel, Netlify, Docker \\ \vspace{3pt}
-    \textbf{Methodologies:} Component-Driven Development, Responsive Design, Mobile-First Approach,  CI/CD
-}}
-\resumeSubHeadingListEnd
-
-%----------- EXPERIENCE -----------
-
+%-----------EXPERIENCE-----------
 \section{Experience}
-\vspace{3pt}
-\resumeSubHeadingListStart
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Frontend Developer}{2023 -- Present}
+      {Freelance}{Remote}
+      \resumeItemListStart
+        \resumeItem{Developed and maintained modern web applications for Web3, healthcare, and service industry clients}
+        \resumeItem{Built responsive user interfaces using React, Next.js, and TypeScript for diverse client requirements}
+        \resumeItem{Conducted code reviews and provided technical guidance on React best practices and Web3 integration patterns}
+        \resumeItem{Made architectural decisions on state management, routing, and deployment strategies across 15+ projects}
+        \resumeItem{Implemented CI/CD pipelines using GitHub Actions and deployed applications across multiple platforms including Vercel, Digital Ocean, and Railway}
+        \resumeItem{Containerized applications using Docker for consistent development and production environments}
+      \resumeItemListEnd
+      
+    \resumeSubheading
+      {Web3 Frontend Developer}{2024 -- Present}
+      {NEAR Protocol Ecosystem}{Remote}
+      \resumeItemListStart
+        \resumeItem{Contributed to open-source projects within the NEAR blockchain ecosystem using React and NEAR Protocol}
+        \resumeItem{Developed user interfaces for decentralized applications (dApps) with Web3 wallet integration}
+        \resumeItem{Implemented blockchain-specific features including transaction handling and smart contract interactions}
+        \resumeItem{Participated in developer community initiatives and collaborative development processes}
+        \resumeItem{Contributed to 3+ open-source NEAR ecosystem projects with 50+ commits}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
 
-\resumeSubheading
-{NEARBuilders}{Remote Part Time}
-{Frontend Engineer}{Sep 2023 \textbf{--} Present}
-\resumeItemListStart
-\resumeItem{\textbf{BetVex} $|$ \emph{\href{https://betvex.xyz}{\color{blue}Website}}
-  \resumeItemListStart
-  \resumeItem{
-    Led a comprehensive UI overhaul of the dashboard, implementing modern design principles and enhancing user experience with responsive layouts and intuitive navigation.}
-  \resumeItem{
-    Integrated GraphQL indexer for real-time data fetching, optimizing performance and reducing load times by 40\% while ensuring seamless data synchronization.}
-  \resumeItem{
-    Executed a major UI uplift by implementing component-based architecture, improving code maintainability and establishing a consistent design system across the platform.}
-  \resumeItemListEnd
-}
-\resumeItem{
-  \vspace{9pt}
-  \textbf{NEAR Catalog} $|$ \emph{\href{https://nearcatalog.xyz}{\color{blue}Website}}
-  \resumeItemListStart
-  \resumeItem{
-    Architected and developed a full-featured catalog platform using Next.js, TypeScript, and React Query, showcasing NEAR blockchain projects with optimized SEO and performance.}
-  \resumeItem{
-    Implemented dynamic data fetching and caching strategies using React Query, reducing API calls by 60\% while maintaining real-time project updates.}
-  \resumeItem{
-    Engineered a responsive and type-safe UI with TypeScript and modern React patterns, achieving a 90+ Lighthouse score for performance and accessibility.}
-  \resumeItemListEnd
-}
-\resumeItem{
-  \vspace{9pt}
-  \textbf{Redacted Event App}
-  \resumeItemListStart
-  \resumeItem{
-    Engineered a modular event platform using React, Vite, and TypeScript, with a reusable architecture that allows rapid deployment for different events while requiring minimal code changes.}
-  \resumeItem{
-    Implemented core features including QR code authentication, wallet integration, and user-to-user transactions using React Query for efficient state management and real-time updates.}
-  \resumeItem{
-    Developed a scalable component system with Chakra UI, encompassing profile management, event navigation, and interactive reward systems, resulting in 70\% code reusability across different events.}
-  \resumeItemListEnd
-}
-\resumeItemListEnd
-\resumeSubHeadingListEnd
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+    \resumeProjectHeading
+        {\textbf{\href{https://try.getcultd.com}{GetCULTD Platform}} (\href{https://app.getcultd.com}{App}, \href{https://dapp.getcultd.com}{dApp}) $|$ \emph{React, Next.js, TypeScript, TailwindCSS, Web3 APIs}}{2024 -- Present}
+        \resumeItemListStart
+          \resumeItem{Architected multi-application deployment strategy across main site, dashboard, and dApp with shared component libraries}
+        \resumeItem{Used TanStack Query for state management to reduce bundle size and improve data synchronization}
+        \resumeItem{Designed responsive interface architecture supporting both Web2 and Web3 authentication flows}
+        \resumeItem{Led technical discussions on API integration patterns for social media automation and payment processing}
+        \resumeItem{Improved Lighthouse performance scores from 65 to 90+ across all GetCULTD deployments}
+    \resumeItemListEnd
+    
+    \resumeProjectHeading
+        {\textbf{\href{https://app.curate.fun}{Curate.fun}} $|$ \emph{React, BOS Framework, NEAR Blockchain, Web3}}{2024 -- Present}
+        \resumeItemListStart
+          \resumeItem{Built decentralized content curation platform optimized for large-scale data handling}
+ \resumeItem{Optimized large-scale content rendering by implementing TanStack Virtual, reducing initial load time for RSS feed}
+\resumeItem{Designed component architecture for blockchain integration balancing performance with Web3 functionality}
+          \resumeItem{Contributed to open-source development following community-driven development practices}
+          \resumeItem{Reduced RSS feed rendering time from 3+ seconds to under 500ms using virtual scrolling}
 
-\resumeSubHeadingListStart
-\resumeSubheading
-{Upwork}{Remote Freelance}
-{Frontend Engineer}{Aug 2024 \textbf{--} Present}
-\resumeItemListStart
-\resumeItem{\textbf{GetCULTD} $|$ \emph{\href{https://app.getcultd.com}{\color{blue}Website}}
- \resumeItemListStart
- \resumeItem{
-   Architected and developed a comprehensive CRM dashboard using Next.js, integrating shadcn-ui and TailwindCSS to create a polished, professional interface for KOL management.}
- \resumeItem{
-   Implemented advanced features including secure authentication, dynamic search functionality, and a Kanban board system, enabling efficient influencer campaign management and tracking.}
- \resumeItem{
-   Built a multi-platform solution comprising both an admin dashboard and a public campaign website, facilitating seamless interaction between KOLs and campaign managers with React Query for real-time data synchronization.}
- \resumeItemListEnd
-}
-\resumeItemListEnd
-\resumeSubHeadingListEnd
+    \resumeItemListEnd
+    
+    \resumeProjectHeading
+        {\textbf{\href{https://dev.near.org/applications}{NEAR Catalog}} $|$ \emph{React, Next.js, NEAR Protocol, Web3 Integration}}{2024}
+        \resumeItemListStart
+          \resumeItem{Contributed to project discovery platform showcasing 350+ active NEAR ecosystem applications}
+          \resumeItem{Implemented end-to-end testing with Playwright ensuring robust user workflows and feature reliability}
+          \resumeItem{Developed dynamic project listing interfaces with advanced filtering and categorization features}
+          \resumeItem{Collaborated with NEAR community developers on open-source codebase improvements}
+    \resumeItemListEnd
+    \resumeSubHeadingListEnd
 
-%----------- AWARDS & ACHIEVEMENTS -----------
 
-\section{Awards \& Achievements}
-\vspace{2pt}
-\resumeSubHeadingListStart
-\small{\item{
-   \textbf{ETHDenver 2023 BUIDLathon Runner-up:} Secured 2nd place among 200+ teams by developing a decentralized events platform leveraging NEAR Protocol's social contracts. The solution enabled secure event management and social interactions in Web3 space. \\ \vspace{3pt}
-}}
-\resumeSubHeadingListEnd
 
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: JavaScript, TypeScript, Python, HTML/CSS, SQL} \\
+     \textbf{Frameworks \& Libraries}{: React, Next.js, Bootstrap, TailwindCSS, shadcn/ui, TanStack} \\
+     \textbf{Developer Tools}{: Git, GitHub, VS Code, Cursor, Vercel, Netlify, npm, Webpack, Figma} \\
+     \textbf{DevOps \& Deployment}{: Docker, GitHub Actions, Digital Ocean, Railway, VPS Hosting, CI/CD Pipelines} \\
+     \textbf{Testing}{: Jest, Playwright, End-to-End Testing, Unit Testing} \\
+     \textbf{Technologies}{: RESTful APIs, JSON, Responsive Web Design, Progressive Web Apps (PWA)} \\
+     \textbf{Databases}{: MongoDB, PostgreSQL, Convex DB}
+    }}
+ \end{itemize}
+
+%-------------------------------------------
 \end{document}
