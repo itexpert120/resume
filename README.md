@@ -1,49 +1,48 @@
-# My LaTeX Resume
+# Resume — Muhammad Zeeshan Ahmad
 
-A clean, ATS-friendly resume template for developers who want something that actually works.
+LaTeX resume (ATS-friendly, text-based PDF). **Source:** [`resume.tex`](resume.tex) · **Latest PDF:** [`resume.pdf`](resume.pdf)
 
-## What's This?
+## Preview
 
-My personal resume built in LaTeX. It's optimized for those pesky ATS systems and looks pretty good too. Specializes in frontend/Web3 stuff but you can adapt it for whatever.
+Click the image to open the PDF (or use the links above).
 
-## How to Use
+[![Resume preview](resume-preview.png)](https://github.com/itexpert120/resume/blob/main/resume.pdf)
 
-**Step 1:** Go to [Overleaf](https://www.overleaf.com/)  
-**Step 2:** Upload `main.tex`  
-**Step 3:** Edit with your own info  
-**Step 4:** Download PDF  
-**Step 5:** Get that job
+> **Note:** After you change `resume.tex`, rebuild `resume.pdf` and refresh `resume-preview.png` so the README matches (see [Build](#build)).
 
-That's it. No LaTeX installation headaches, no command line nonsense.
+## Quick links (GitHub)
 
-## What's Inside
+| File | View on GitHub |
+|------|----------------|
+| LaTeX source | [`resume.tex`](https://github.com/itexpert120/resume/blob/main/resume.tex) |
+| PDF | [`resume.pdf`](https://github.com/itexpert120/resume/blob/main/resume.pdf) |
+| Download PDF (raw) | [`resume.pdf` (raw)](https://github.com/itexpert120/resume/raw/main/resume.pdf) |
 
-- Frontend Developer experience (React, Next.js, TypeScript)
-- Web3 projects (NEAR Protocol, BOS Framework) 
-- Performance optimizations and testing
-- Clean technical skills section
-- Real project links that actually work
+## Build
 
-## Want to Customize?
+Requires a LaTeX distribution (TeX Live, MiKTeX, or MacTeX).
 
-Just replace my info with yours. The structure is pretty self-explanatory. Change the projects, update the skills, fix the contact details.
+```bash
+latexmk -pdf -interaction=nonstopmode resume.tex
+```
 
-**Pro tip:** Keep the same format - it plays nice with ATS systems.
+Or with `pdflatex`:
 
-## Credits
+```bash
+pdflatex -interaction=nonstopmode resume.tex
+```
 
-## Contact
+Optional — update the README thumbnail (first page only; requires [Poppler](https://poppler.freedesktop.org/) `pdftoppm` or ImageMagick):
 
-**Muhammad Zeeshan Ahmad**  
-- Email: itexpert120@outlook.com
-- LinkedIn: [linkedin.com/in/itexpert120](https://linkedin.com/in/itexpert120)
-- GitHub: [github.com/itexpert120](https://github.com/itexpert120)
-- Portfolio: [itexpert120.vercel.app](https://itexpert120.vercel.app)
+```bash
+pdftoppm -png -f 1 -l 1 -r 150 resume.pdf resume-preview
+move resume-preview-1.png resume-preview.png
+```
+
+## Customize
+
+Edit `resume.tex` with your content. Keep section titles conventional (e.g. Experience, Education) for ATS parsers. Commit `resume.pdf` when you want the repo to show the latest export; auxiliary files are gitignored.
 
 ## License
 
-This project is licensed under the MIT License - see the original template repository for details.
-
----
-
-*Looking for remote frontend developer opportunities, particularly in Web3 and React-based applications.*
+See [LICENSE.md](LICENSE.md).
